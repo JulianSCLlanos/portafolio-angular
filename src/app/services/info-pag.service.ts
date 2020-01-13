@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { InfoPagina } from '../interfaces/info-pag.interfaces';
+import { InfoEquipo } from '../interfaces/info-team.interfaces';
 //import { HttpClient } from 'selenium-webdriver/http';
 
 @Injectable({
@@ -11,12 +12,14 @@ export class InfoPagService {
   info: InfoPagina = {};
   cargada = false;
 
-  equipo = [];
+  equipo: InfoEquipo = {};
     
   constructor( private http: HttpClient) {
     //console.log('Servicio de infoPag listo.');
 
     this.cargarInfo();
+
+    this.cargarEquipo();
 
   }
 
@@ -34,6 +37,15 @@ export class InfoPagService {
   }
 
   private cargarEquipo() {
+
+    this.http.get('assets/data/data-team.json')
+      .subscribe( (resp: InfoEquipo ) => {
+
+        this.cargada = true;
+        this.equipo = resp;
+        console.log(resp);
+
+      });
 
   }
 }
