@@ -10,10 +10,17 @@ export class InfoPagService {
 
   info: InfoPagina = {};
   cargada = false;
+
+  equipo = [];
     
   constructor( private http: HttpClient) {
-
     //console.log('Servicio de infoPag listo.');
+
+    this.cargarInfo();
+
+  }
+
+  private cargarInfo() {
 
     this.http.get('assets/data/data-pag.json')
       .subscribe( (resp: InfoPagina) => {
@@ -23,6 +30,10 @@ export class InfoPagService {
         console.log(resp);
         
       });
+
+  }
+
+  private cargarEquipo() {
 
   }
 }

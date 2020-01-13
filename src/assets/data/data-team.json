@@ -1,0 +1,23 @@
+[
+    {
+        "frase": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. ",
+        "nombre": "Julián SC Llanos",
+        "subtitulo": "Estudiante",
+        "twitter": "@juliven",
+        "url_img": "https://firebasestorage.googleapis.com/v0/b/angular-html-40e4e.appspot.com/o/team-1.jpg?alt=media&token=0c9cfdbb-7797-4570-a70c-141f6df4f33b"
+    },
+    {
+        "frase": "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+        "nombre": "Angelina Widow",
+        "subtitulo": "Fundadora",
+        "twitter": "@angelinawidow",
+        "url_img": "https://firebasestorage.googleapis.com/v0/b/angular-html-40e4e.appspot.com/o/team-2.jpg?alt=media&token=6743f115-4c57-4b98-804c-fd494d344014"
+    },
+    {
+        "frase": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "nombre": "Patrick Henderson",
+        "subtitulo": "Director ",
+        "twitter": "@patrickson",
+        "url_img": "https://firebasestorage.googleapis.com/v0/b/angular-html-40e4e.appspot.com/o/team-3.jpg?alt=media&token=1bebe5f9-01af-4919-a7df-f9bdaca7428e"
+    }
+]
