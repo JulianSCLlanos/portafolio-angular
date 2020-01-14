@@ -12,7 +12,7 @@ export class InfoPagService {
   info: InfoPagina = {};
   cargada = false;
 
-  equipo: InfoEquipo = {};
+  equipo: any[] = [];
     
   constructor( private http: HttpClient) {
     //console.log('Servicio de infoPag listo.');
@@ -30,7 +30,7 @@ export class InfoPagService {
 
         this.cargada = true;
         this.info = resp;
-        console.log(resp);
+        //console.log(resp);
         
       });
 
@@ -38,12 +38,12 @@ export class InfoPagService {
 
   private cargarEquipo() {
 
-    this.http.get('assets/data/data-team.json')
-      .subscribe( (resp: InfoEquipo ) => {
+    this.http.get('https://angular-html-40e4e.firebaseio.com/equipo.json')
+      .subscribe( (resp: any[] ) => {
 
-        this.cargada = true;
+        //this.cargada = true;
         this.equipo = resp;
-        console.log(resp);
+        //console.log(resp);
 
       });
 
