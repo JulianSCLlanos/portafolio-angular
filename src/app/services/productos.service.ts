@@ -51,6 +51,7 @@ export class ProductosService {
 
     }else{
       //aplicar filtro
+      this.filtrarProductos( termino );
     }
 
   }
@@ -61,8 +62,17 @@ export class ProductosService {
     });
     console.log(this.productosFiltro);*/
 
-    console.log(this.productos);
+    //console.log(this.productos);
+    this.productosFiltro = [];
+    termino = termino.toLowerCase();
+
+    this.productos.forEach( prod => {
+
+      const tituloMin = prod.titulo.toLowerCase();
+      if( prod.categoria.indexOf( termino ) >= 0 || tituloMin.indexOf( termino ) >= 0 ){
+        this.productosFiltro.push( prod );
+      }
+    });
   }
   
-
 }
